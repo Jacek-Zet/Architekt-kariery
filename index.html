@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekosystem Kreatora AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-bg': '#111827',
+              'brand-surface': '#1F2937',
+              'brand-border': '#374151',
+              'brand-text-primary': '#F9FAFB',
+              'brand-text-secondary': '#9CA3AF',
+              'brand-accent': '#6366F1',
+              'brand-accent-hover': '#4F46E5',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        .printable-report, .printable-report * {
+          visibility: visible;
+        }
+        .printable-report {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          padding: 2rem;
+          color: black;
+        }
+        .print-hidden {
+          display: none !important;
+        }
+        .print-text-black {
+          color: black !important;
+        }
+        .print-border-gray {
+          border-color: #e5e7eb !important;
+        }
+        .print-bg-white {
+          background-color: white !important;
+        }
+         .print-text-indigo {
+          color: #4f46e5 !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.6",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-bg text-brand-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
